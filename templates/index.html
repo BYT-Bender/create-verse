@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI API Interface</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <h1>AI API Interface</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="user_input" placeholder="Enter your prompt">
+        <select name="api_selection">
+            <option value="api_1">Gemini 1.5 Flash</option>
+            <option value="api_2">Gemini 1.5 Flash 8b</option>
+        </select>
+        <input type="file" name="file_upload">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Response:</h2>
+    <div>
+        {{ response_html|safe }}
+    </div>
+</body>
+</html>
