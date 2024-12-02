@@ -1,0 +1,206 @@
+.container {
+    width: 1200px !important;
+    padding: 0 !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1439px) {
+    .container {
+      max-width: 1279px !important;
+      padding: 0 !important;
+      margin: 0 80px !important;
+      width: auto !important;
+    }
+  }
+  
+  @media screen and (max-width: 991px) {
+    .container {
+      max-width: 959px !important;
+      margin: 0 16px !important;
+      padding: 0 !important;
+      width: auto !important;
+    }
+  }
+  
+  .gradient-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 30px;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .gradient-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .container-title {
+    text-align: center;
+    padding: 0 !important;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 60px;
+  }
+  
+  .card {
+    max-width: 550px;
+    border: 0;
+    width: 100%;
+    margin-inline: auto;
+    transition: all 0.3s; /* Smooth transition for hover */
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    transform: scale(0.98); /* Slight scaling effect */
+  }
+  
+  .container-card {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 40px;
+  }
+  
+  .bg-green-box {
+    position: relative;
+  }
+  
+  .bg-green-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+  }
+  
+  .bg-green-box:hover {
+    box-shadow: 0px 0px 30px 1px rgba(61, 160, 119, 0.3); /* Green hover effect */
+  }
+  
+  .bg-white-box {
+    position: relative;
+  }
+  
+  .bg-white-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+    background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+  }
+  
+  .bg-white-box:hover {
+    box-shadow: 0px 0px 30px 1px rgba(176, 175, 176, 0.3); /* White hover effect */
+  }
+  
+  .bg-yellow-box {
+    position: relative;
+  }
+  
+  .bg-yellow-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+    background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+  }
+  
+  .bg-yellow-box:hover {
+    box-shadow: 0px 0px 30px 1px rgba(175, 162, 32, 0.3); /* Yellow hover effect */
+  }
+  
+  .bg-blue-box {
+    position: relative;
+  }
+  
+  .bg-blue-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+    background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+  }
+  
+  .bg-blue-box:hover {
+    box-shadow: 0px 0px 30px 1px rgba(95, 111, 173, 0.3); /* Blue hover effect */
+  }
+  
+  .card-title {
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-style: normal;
+    font-size: 28px;
+    padding-bottom: 8px;
+  }
+  
+  .card-description {
+    font-weight: 600;
+    line-height: 32px;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 16px;
+    max-width: 470px;
+  }
+  /* Left-side fade-in */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Right-side fade-in */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hidden state */
+.hidden {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+/* Left-side visible with smooth transition */
+.visible-left {
+  animation: fadeInLeft 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Right-side visible with smooth transition */
+.visible-right {
+  animation: fadeInRight 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
