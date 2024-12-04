@@ -79,7 +79,7 @@
         </div>
         <!-- button arrows -->
         <div class="arrows">
-            <button id="prev"></button>
+            <button id="prev"><</button>
             <button id="next">></button>
         </div>
         <!-- thumbnail -->
@@ -268,6 +268,7 @@
               
               <h2 class ="orion-head"> Orion Pax</h2>
               <button class="btn-1">Try Now <i class="fas fa-arrow-right arrow-icon"></i></button>
+              <div class="dark_cards">
               <div class="dark-card">
                 <div class="languages">
                     
@@ -316,13 +317,55 @@
                 <div class="story_generator">
                     <img class="story-img" src="./story_4.jpeg" alt="story-generator">
                 </div>
-                <h3 class="title" style="margin-top:25px;">Story Generation Made Easy</h3>
-                <p class="subtitle">Create personalized stories effortlessly with the power of AI.</p>
+                <h3 class="title1" style="margin-top:25px;">Story Generation Made Easy</h3>
+                <p class="subtitle1">Create personalized stories effortlessly with the power of AI.</p>
                 
             </div>
              <div class="dark-card3">
-              .
+              <div class="email-writer">
+                <img class="email-img" src="./email-img2.jpeg" alt="email-image">
+              </div>
+                <h3 class="title2">Effortless Email Writing</h3>
+                <p class="subtitle2">Compose impactful and personalized emails in seconds with AI.</p>
              </div>
+             <div class="dark-card4">
+              <div class="content">
+                <img class="content-img" src="./content.webp" alt="content">
+              </div>
+              <h3 class="title2">Content Enhancement</h3>
+              <p class="subtitle2">Enhance the grammar, tone, and style of your text seamlessly with AI.</p>
+             </div>
+             <div class="dark-card5">
+              <div class="idea">
+                <img class="idea-img" src="./ideas-img.jpeg" alt="idea">
+              </div>
+              <h3 class="title5">Creative Idea Generation</h3>
+              <p class="subtitle5">Generate creative ideas for blogs, projects, and brainstorming with AI in moments..</p>
+             </div>
+             <div class="dark-card6">
+              <div class="Academic">
+                <img class="Academic-img" src="./Academy-img.webp" alt="Academic">
+              </div>
+              <h3 class="title6">Academic Assistance</h3>
+              <p class="subtitle6">Generate well-structured assignments and clear explanations to simplify your academic tasks.</p>
+             </div>
+            </div>
+            <div class="dark-card7">
+             <div class="code">
+               <img class="code-img" src="./code1.jpeg" alt="code">
+             </div>
+             <h3 class="title6">Code Explanation</h3>
+             <p class="subtitle6">Simplify code snippets into plain language for easy understanding by developers and learners.</p>
+            </div>
+            <div class="dark-card8">
+              <div class="Study">
+                <img class="study-img" src="./DALL·E 2024-12-03 21.46.53 - A futuristic depiction of an AI-powered study assistant displayed on a sleek tablet or computer screen. The scene features dynamic, colorful graphs, n.webp" alt="study">
+              </div>
+              <h3 class="title6">Smart Study Assistance</h3>
+              <p class="subtitle6">Get personalized study guides, summaries, and explanations to boost your learning efficiency.</p>
+
+             </div>
+            </div>
             </div>
           </div>
 
@@ -339,5 +382,42 @@
           interval: 200      // Interval between multiple elements, if any
       });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // ScrollReveal for the first row (cards 1, 2, text, and button)
+        ScrollReveal().reveal('.dark-card, .dark-card2, .orion-head, .btn-1', {
+            distance: '100px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            // reset: true,
+            delay: 500 // First row reveals immediately
+        });
+
+        // ScrollReveal for the second row (cards 3, 4, 5)
+        ScrollReveal().reveal('.dark-card3, .dark-card4, .dark-card5', {
+            distance: '100px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            // reset: true,
+            delay: 1000 // Second row reveals after a delay
+        });
+
+        // ScrollReveal for the third row (cards 6, 7, 8)
+        ScrollReveal().reveal('.dark-card6, .dark-card7, .dark-card8', {
+            distance: '100px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            // reset: true,
+            delay: 1000 // Third row reveals after a larger delay
+        });
+    });
+</script>
+
 </body>
 </html>

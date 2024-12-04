@@ -8,9 +8,9 @@
 
 /* Body */
 body {
-    background: radial-gradient(circle, 
-        rgba(30, 30, 30, 1) 0%, 
-        rgba(20, 20, 20, 1) 40%, 
+    background: radial-gradient(circle,
+        rgba(30, 30, 30, 1) 0%,
+        rgba(20, 20, 20, 1) 40%,
         rgba(10, 10, 10, 1) 100%
     );
     color: #ffffff; /* Pure white for clarity */
@@ -136,7 +136,7 @@ input:checked + label .description {
     transform: translateY(0) !important;
 }
 .orion-head{
-    margin-top: 200px;
+    margin-top: 350px;
  margin-left: 100px;
  font-size: 100px;
  width: 3000px;
@@ -187,10 +187,11 @@ input:checked + label .description {
     min-height: 100vh;
 }
 
+
 .dark-card {
     background-color: #1e1e1e;
-    margin-top: -190px;
-    margin-left: 700px;
+    margin-top: -300px;
+    margin-left: 625px;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
@@ -216,7 +217,72 @@ input:checked + label .description {
     height: 280px;
     margin-left: 110px;
 }
-
+.dark-card3{
+    background-color: #1e1e1e;
+    margin-top: 50px;
+    margin-left: 130px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 350px;
+    height: 400px;
+}
+.dark-card4{
+    background-color: #1e1e1e;
+    margin-top:  -399px;
+    margin-left: 620px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 350px;
+    height: 400px;
+}
+.dark-card5{
+    background-color: #1e1e1e;
+    margin-top:  -399px;
+    margin-left: 1096px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 350px;
+    height: 400px;
+}
+.dark-card6{
+    background-color: #1e1e1e;
+    margin-top:  60px;
+    margin-left: 1096px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 350px;
+    height: 400px;
+}
+.dark-card7{
+    background-color: #1e1e1e;
+    margin-top:  -399px;
+    margin-left: 620px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 350px;
+    height: 400px;
+}
+.dark-card8{
+    background-color: #1e1e1e;
+    margin-top:  -399px;
+    margin-left: 130px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 350px;
+    height: 400px;
+}
 .language-card {
     background-color: #2a2a2a;
     color: #ffffff;
@@ -240,6 +306,7 @@ input:checked + label .description {
     border-radius: 3px;
 }
 
+
 .title {
     font-size: 1.3em;
     font-weight: bold;
@@ -251,10 +318,102 @@ input:checked + label .description {
     color: #aaaaaa;
     margin-top: 15px;
 }
+.title1 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: -25px 0;
+}
 
+.subtitle1{
+    font-size: 1em;
+    color: #aaaaaa;
+    margin-top: 25px;
+}
+.title2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.subtitle2 {
+    font-size: 1em;
+    color: #aaaaaa;
+    margin-top: -20px;
+}
+.title5 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.subtitle5 {
+    font-size: 1em;
+    color: #aaaaaa;
+    margin-top: -10px;
+}
+.title6 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.subtitle6 {
+    font-size: 1em;
+    color: #aaaaaa;
+    margin-top: -10px;
+}
 .story-img {
     height: 210px;
     width: 270px;
     margin-top: 10px;
     margin-left: 2px;
 }
+.email-img{
+    height: 210px;
+    width: 270px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+.content-img {
+    height: 210px;
+    width: 270px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+.idea-img{
+    height: 210px;
+    width: 270px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+.Academic-img{
+    height: 210px;
+    width: 270px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+.code-img{
+    height: 210px;
+    width: 270px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+.study-img{
+    height: 210px;
+    width: 270px;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+/* ScrollReveal animation for the cards, text, and button */
+[data-sr] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-sr-visible] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
