@@ -1,0 +1,178 @@
+{
+    "writer": [
+        {
+            "id": 1,
+            "name": "Article & Content Writer Tools",
+            "description": "Looking for better way to write your content or articles? Check out these tools!",
+            "items": [
+                {
+                    "title": "AI Writer",
+                    "display": "AI Writer",
+                    "url": "ai-writer",
+                    "description": "Get your writing done faster and easier with AI Writer.",
+                    "header": "What topic would you like to write about?",
+                    "placeholder": "Enter your title or topic here",
+                    "example": "Benefits of Digital Marketing",
+                    "payload": "Write an article based on this - "
+                },
+                {
+                    "title": "AI Writing Assistant",
+                    "display": "Write Anything",
+                    "url": "ai-writing-assistant",
+                    "description": "Increase The Quality of Your Writing",
+                    "header": "Ask anything or give any writing job",
+                    "placeholder": "Ask anything or give any writing job here",
+                    "example": "Write an article about digital marketing",
+                    "payload": ""
+                },
+                {
+                    "title": "AI Writing Assistant",
+                    "display": "AI Content Generator",
+                    "url": "ai-content-generator",
+                    "description": "AI-Generated Content that is realistic, and accurate.",
+                    "header": "What is your content Title or Topic?",
+                    "placeholder": "Enter topic here",
+                    "example": "How to make money online",
+                    "payload": "Write an article based on this - "
+                },
+                {
+                    "title": "AI Paragraph Generator",
+                    "display": "Paragraph Generator",
+                    "url": "paragraph-generator",
+                    "description": "Make writing paragraphs easier with our generator!",
+                    "header": "What is your paragraph Title or Topic?",
+                    "placeholder": "Enter topic or subtopic",
+                    "example": "Benefits of a Plant-Based Diet",
+                    "payload": "Make some paragraph in this topic: - "
+                },
+                {
+                    "title": "AI Paragraph Expander",
+                    "display": "Paragraph Expander",
+                    "url": "paragraph-expander",
+                    "description": "Expand Your Thoughts, Effortlessly",
+                    "header": "Paste your text here.",
+                    "placeholder": "Type or paste your text here",
+                    "example": "",
+                    "payload": "Expand This Text : "
+                },
+                {
+                    "title": "AI Text Generator",
+                    "display": "AI Text Generator",
+                    "url": "ai-text-generator",
+                    "description": "Create unlimited AI text with our easy-to-use generator.",
+                    "header": "What is your topic?",
+                    "placeholder": "Enter your topic here",
+                    "example": "How to make money online",
+                    "payload": "Make some paragraph in this topic - "
+                },
+                {
+                    "title": "Blog Outline Generator",
+                    "display": "Blog Outline Maker",
+                    "url": "outline-generator",
+                    "description": "Make your blog outline in a snap!",
+                    "header": "What do you want to write about?",
+                    "placeholder": "Enter your topic here",
+                    "example": "How to make money online.",
+                    "payload": "Write 10 outline in this topic for article: "
+                },
+                {
+                    "title": "Blog Intro Generator",
+                    "display": "Blog Intro Generator",
+                    "url": "introduction-generator",
+                    "description": "Make your blog introduction stand out with our easy to use generator tools.",
+                    "header": "What do you want to write about?",
+                    "placeholder": "Enter your Title or Topic here",
+                    "example": "How to make money online.",
+                    "payload": "Write Introduction in this topic for article: "
+                },
+                {
+                    "title": "AI Copy-Writer",
+                    "display": "AI Copy Writer",
+                    "url": "ai-copywriter",
+                    "description": "The future of copywriting is here.",
+                    "header": "What do you want to write about?",
+                    "placeholder": "Enter topic here",
+                    "example": "What is Digital Marketing",
+                    "payload": "Write an article on this topic : "
+                },
+                {
+                    "title": "AI Meta Description",
+                    "display": "Meta Description",
+                    "url": "meta-description-generator",
+                    "description": "Make your site's meta descriptions more effective with our AI generator.",
+                    "header": "What do you want to write about?",
+                    "placeholder": "Enter topic here",
+                    "example": "How to make money online",
+                    "payload": "Write a meta description (under 150 - 160 chr) in this topic: "
+                },
+                {
+                    "title": "AI Blog Writer",
+                    "display": "AI Blog Writer",
+                    "url": "ai-blog-writer",
+                    "description": "Generate Quality Blogs In Seconds",
+                    "header": "What topic would you like to write about?",
+                    "placeholder": "Enter your title or topic here",
+                    "example": "Benefits of Digital Marketing",
+                    "payload": "Write an article based on this - "
+                },
+                {
+                    "title": "Topic Sentence Generator",
+                    "display": "Topic Sentence",
+                    "url": "topic-sentence",
+                    "description": "Take Your Creativity To The Next Level",
+                    "header": "What do you want to write sentence about?",
+                    "placeholder": "Please enter your topic along with any specific points or keywords...",
+                    "example": "",
+                    "payload": "Write sentence based on this topic or prompts: "
+                },
+                {
+                    "title": "AI Paper Writer",
+                    "display": "AI Paper Writer",
+                    "url": "ai-paper-writer",
+                    "description": "Write smarter, not harder, with the power of AI paper writer tools at your fingertips.",
+                    "header": "What do you want to write about?",
+                    "placeholder": "Please provide me with a clear and specific topic, as well as any additional instructions or requirements you may have.",
+                    "example": "The impact of social media on mental health in teenagers",
+                    "payload": "Write a paper on this topic : "
+                },
+                {
+                    "title": "AI FAQ Generator",
+                    "display": "FAQs Generator",
+                    "url": "faq-generator",
+                    "description": "Get all your questions & answered in one place!",
+                    "header": "What do you want to write FAQs about?",
+                    "placeholder": "Enter topic here",
+                    "example": "Digital marketing",
+                    "payload": "Write some FAQs with questions and answers on this topic : "
+                },
+                {
+                    "title": "Introduction Paragraph",
+                    "display": "Intro Paragraph",
+                    "url": "introduction-paragraph",
+                    "description": "Transform Ideas into Engaging Introductions with AI!",
+                    "header": "What is your Topic/Subject?",
+                    "placeholder": "Enter a brief topic, a few keywords, or a short paragraph to provide context for your introduction.",
+                    "example": "",
+                    "payload": "Write a Introduction Paragraph based on this: - "
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Text to Image Tools",
+            "description": "",
+            "items": [
+                {
+                    "title": "AI Image Generator",
+                    "display": "AI Image Generator",
+                    "url": "ai-image-generator",
+                    "description": "Your Imagination, Brought to Life by AI.",
+                    "header": "Write a prompt for generating an image",
+                    "placeholder": "Enter prompt here",
+                    "example": "A photo of an astronaut riding a horse on Mars.",
+                    "payload": "[image]"
+                }
+            ]
+        }
+    ]
+}
