@@ -2,6 +2,23 @@
     "writer": [
         {
             "id": 1,
+            "name": "Chatbots",
+            "description": "Chat with Gemini",
+            "items": [
+                {
+                    "title": "Gemini",
+                    "display": "Gemini",
+                    "url": "gemini",
+                    "description": "Get help with writing, planning, learning, and more from Google AI.",
+                    "header": "Hello User",
+                    "placeholder": "Ask Gemini",
+                    "example": "",
+                    "payload": ""
+                }
+            ]
+        },
+        {
+            "id": 2,
             "name": "Article & Content Writer Tools",
             "description": "Looking for better way to write your content or articles? Check out these tools!",
             "items": [
