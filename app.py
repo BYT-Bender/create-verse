@@ -9,18 +9,28 @@ app = Flask(__name__)
 MODEL_API_1 = "gemini-1.5-flash"
 MODEL_API_2 = "gemini-1.5-flash-8b"
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/image')
+def image():
+    model = request.args.get('model', '')
+    return render_template('image.html', model=model)
+
+@app.route('/')
+def slider():
+    return render_template('slider.html')
+
+@app.route('/index', methods=['GET', 'POST'])
 def index():
     response_text = ""
     if request.method == 'POST':
         user_input = request.form.get('user_input')
+        payload = request.form.get('payload')
         selected_api = request.form.get('api_selection')
         uploaded_file = request.files.get('file_upload')
 
         if not user_input:
             response_text = "Please provide input text."
         else:
-            user_input = f"Write an article based on this - {user_input}"
+            user_input = f"{payload}{user_input}"
 
             model_map = {
                 'api_1': MODEL_API_1,
