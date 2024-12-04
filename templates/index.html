@@ -7,22 +7,150 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
-<body>
-    <h1>AI API Interface</h1>
-    
-    <form method="POST" enctype="multipart/form-data">
-        <input type="text" name="user_input" placeholder="Enter your prompt">
-        <select name="api_selection">
-            <option value="api_1">Gemini 1.5 Flash</option>
-            <option value="api_2">Gemini 1.5 Flash 8b</option>
-        </select>
-        <input type="file" name="file_upload">
-        <button type="submit">Submit</button>
-    </form>
+<body>    
+    <div class="app">
+        <aside class="sidebar">
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search tools..." class="search-input">
+                </div>
+            </div>
+            <div class="topic-container">
+                <!-- JS Injection -->
+            </div>
+            <footer>
+                <span>14 Tools Available</span>
+            </footer>
+        </aside>
 
-    <h2>Response:</h2>
-    <div>
-        {{ response_html|safe }}
+        <main class="main-content">
+            <header class="chat-header">
+                <span class="title">AI Writer</span>
+                <span class="description">Get your writing done faster and easier with AI Writer.</span>
+            </header>
+
+            <div class="chat-main">
+                <!-- <div class="chat-content">
+                    <h1>How can I help you today?</h1>
+                    <p class="subtitle">This mode will display a prompt asking the user for their name, and then it will display a greeting message with the name entered by the user.</p>
+                    
+                    <div class="feature-boxes">
+                        <div class="feature-box">
+                            <h3>Saved Prompt Templates</h3>
+                            <p>Use your saved and recent prompt templates to kickstart your work</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>Media Type Selection</h3>
+                            <p>Use to select prompts type for text or media output</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>Multilingual Support</h3>
+                            <p>Choose language for better interaction</p>
+                        </div>
+                    </div>
+                </div> -->
+                {{ response_html|safe }}
+            </div>
+
+            <div class="input-container">
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="input-bar">
+
+                        <div class="dropdown">
+                            <input type="text" name="api_selection" id="api_selection" hidden>
+                            <button type="button" class="dropdown-button">Gemini 1.5 Flash</button>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item" data-value="api_1">Gemini 1.5 Flash</li>
+                                <li class="dropdown-item" data-value="api_2">Gemini 1.5 Flash 8b</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- <select name="api_selection">
+                            <option value="api_1">Gemini 1.5 Flash</option>
+                            <option value="api_2">Gemini 1.5 Flash 8b</option>
+                        </select> -->
+
+                        <div class="file-container">
+                            <input type="file" name="file_upload" id="file-upload" hidden/>
+                            <label for="file-upload">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
+                                </svg>
+                            </label>
+                            <span id="file-chosen">No file chosen</span>
+                        </div>
+
+
+                        <!-- <input type="file" name="file_upload"> -->
+                        <input type="text" name="payload" id="payload" value="" hidden>
+                        <input type="text" name="user_input" placeholder="Type your message..." id="userInput">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+                            </svg>
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const payloadInput = document.getElementById("payload");
+            let urlString = window.location.href;
+            let paramString = urlString.split('?')[1];
+            let queryString = new URLSearchParams(paramString);
+
+            let modelValue;
+            if (queryString.has("model")) {
+                modelValue = queryString.get("model");
+                payloadInput.value = modelValue;
+            }
+
+            const chatHeaderTitle = document.querySelector(".chat-header .title");
+            const chatHeaderDescription = document.querySelector(".chat-header .description");
+
+
+        const sidebar = document.getElementsByClassName("topic-container")[0];
+        fetch("{{ url_for('static', filename='data.json') }}")
+            .then(response => response.json())
+            .then(data => {
+                data.writer.forEach(topic => {
+                    const newSection = document.createElement('section');
+
+                    const newHeader = document.createElement('header');
+                    newHeader.innerHTML = topic.name;
+                    newSection.appendChild(newHeader);
+
+                    const newContainer = document.createElement('div');
+                    newContainer.classList.add('item-container');
+
+                    topic.items.forEach(item => {
+                        const newLink = document.createElement('a');
+                        if (item.url == "ai-image-generator") {
+                            newLink.href = `/image?model=${item.url}`;
+                        } else {
+                            newLink.href = `/index?model=${item.url}`;
+                        }
+                        const newItem = document.createElement('div');
+                        newItem.classList.add('item');
+                        newItem.innerHTML = item.display;
+                        if (item.url == modelValue) {
+                            chatHeaderTitle.innerHTML = item.title;
+                            chatHeaderDescription.innerHTML = item.description;
+                        }
+                        newLink.appendChild(newItem);
+                        newContainer.appendChild(newLink);
+                    });
+
+                    newSection.appendChild(newContainer);
+                    sidebar.appendChild(newSection);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
 </body>
 </html>
